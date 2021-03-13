@@ -1,0 +1,34 @@
+springmvc：一个基于spring的框架，实际是spring的一个模块，专门做web开发，是servlet的一个升级版
+	
+	web开发底层都是servlet，框架载servlet基础上加入一些功能，使web开发更方便
+
+springmvc就是一个spring。spring是容器，ioc能管理对象，使用bean标签 @Component @Repository @service @Controller
+	springmvc能创建对象，放入容器中（springmvc容器），springmvc容器存放的是控制器对象
+	
+	开发者需要 @Controller创建控制器对象，把对象放到springmvc容器中，把创建的对象当作控制器使用，能接收用户的请求显示处理结果，当作一个servlet使用
+	@Controller创建的就是一个普通对象，但是springmvc赋予了@Controller这个对象servlet的功能。
+
+	web底层是servlet，springmvc底层有个对象是servlet：DispatherServlet(中央调度器) 负责接收用户所有的请求，用户把请求给DispatherServlet，之后DispatherServlet把请求转发给 @Controller
+	最后是 @Controller对象处理请求的。
+	index.jsp----------》DispatherServlet-------------》@Controller对象
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+springmvc请求处理的流程
+	用户发起请求some.do------>tomcat(tomcat读取web文件 根据web.xml---url--pattern 知道.do的请求给中央调度器)-----》中央调用器（读取springmvc配置文件，配置文件中的组件扫描器。知道
+	有some.do和MyController的方法对应）-----》MyController的doSome方法-----》执行doSome把得到的ModelAndView进行处理------show.jsp
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+执行过程源码分析
+1.tomcat启动，创建容器的过程
+	通过<load-on-startup>标签指定的1，创建DispatherServlet对象，DispatherServlet是给servlet，在被创建时会执行init（）方法
+	创建容器的作用：创建@Controller注解所在类的对象
+	这个对象放入springmvc的容器中，容器是个map
+	这样只要tomcat已启动，Controller对象就有了
+2.请求的处理过程
+
+p11
+
+
+听完前3部分就转springboot完事了
+

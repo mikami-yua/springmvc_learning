@@ -1,0 +1,20 @@
+springmvc:
+用户载页面发起请求，控制器接到请求之后交给springmvc控制器对象，并显示处理结果（在结果页面显示结果）
+
+实现步骤
+1.新建web maven工程
+2.加入依赖
+    spring-webmvc依赖，间接把spring依赖都加入项目中
+    jsp
+    servlet
+3.在web.xml文件中注册springmvc框架的核心对象DispatcherServlet(中央调度器)
+    DispatcherServlet是个servlet，父类继承httpservlet
+    DispatcherServlet也叫做前端控制器，负责接收用户提交的请求，调用其他的控制器对象，并把处理结果显示给用户
+4.创建一个发起请求的页面index.jsp
+5.创建控制器类
+    在类的上面加@Controller注解，创建对象，放在springmvc容器中
+    在类中的方法上面，加入@RequestMapping注解
+6.创建一个作为结果的jsp，显示结果
+7.创建springmvc配置文件（和spring相同）
+    声明组件扫描器，指定@Controller注解所在的包名//使用注解就需要使用扫描器
+    声明视图解析器，帮助处理视图
