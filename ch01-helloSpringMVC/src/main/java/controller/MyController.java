@@ -35,7 +35,8 @@ public class MyController {
         mv.addObject("func","执行doSome方法");
 
         //指定视图,试图的完整路径 框架对视图执行forward转发操作
-        mv.setViewName("/show.jsp");
+        //mv.setViewName("/WEB-INF/view/show.jsp");
+        mv.setViewName("show");
         return mv;
     }
 }

@@ -1,5 +1,5 @@
 springmvc:
-用户载页面发起请求，控制器接到请求之后交给springmvc控制器对象，并显示处理结果（在结果页面显示结果）
+requestmapping注解怎么用
 
 实现步骤
 1.新建web maven工程
@@ -24,3 +24,10 @@ springmvc:
     访问方式：controller的路径改变 mv.setViewName("/WEB-INF/view/show.jsp");
         在mvc.xml配置文件中声明视图解析器,配置视图解析器后controller中可以使用逻辑名称（文件名）指定视图
         框架会使用视图解析器的前缀，加上逻辑名称，再加上后缀组成完整路径（字符串连接）
+
+--------------------------------------------------------------------------------------------------------
+http://localhost:8080/ch02_requestmapping/test/some.do
+http://localhost:8080/ch02_requestmapping/test/other.do
+所有地址中公用的部分称为模块名称，可以把模块名称抽取出来（原来在方法上），在类上统一定义
+
+接收用户请求提供的参数

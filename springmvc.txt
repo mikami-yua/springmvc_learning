@@ -26,8 +26,9 @@ springmvc请求处理的流程
 	这个对象放入springmvc的容器中，容器是个map
 	这样只要tomcat已启动，Controller对象就有了
 2.请求的处理过程
+    servlet由service方法处理请求.中央调度器调用了doDispatch()方法
 
-p11
+
 
 
 听完前3部分就转springboot完事了
