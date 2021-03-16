@@ -4,6 +4,7 @@
     <file type="web" url="file://$PROJECT_DIR$/ch01-helloSpringMVC" />
     <file type="web" url="file://$PROJECT_DIR$/ch02-requestmapping" />
     <file type="web" url="file://$PROJECT_DIR$/ch03-reciveparam" />
+    <file type="web" url="file://$PROJECT_DIR$/ch04-return" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,6 +12,7 @@
         <option value="$PROJECT_DIR$/ch01-helloSpringMVC/pom.xml" />
         <option value="$PROJECT_DIR$/ch02-requestmapping/pom.xml" />
         <option value="$PROJECT_DIR$/ch03-reciveparam/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04-return/pom.xml" />
       </list>
     </option>
   </component>
