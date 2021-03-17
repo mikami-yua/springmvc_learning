@@ -1,0 +1,23 @@
+ssm整合开发
+springmvc界面层 接收请求
+spring 业务层 管理dao service
+mybatis 持久层，访问数据库
+
+ssm整合涉及到容器的问题
+    springmvc 管理controller
+    spring 管理dao
+    开发者需要把使用的对象交给合适的容器创建管理
+    两个容器有关系，关系已经确定，springmvc是spring的子容器
+    子容器中的对象可以访问父容器的对象（关系已经确定好了）
+
+步骤：
+    1.新建一个maven web项目
+    2.加入依赖 springmvc spring mybatis jackson mybatis驱动 druid连接池 jsp servlet
+    3.写web。xml
+        注册中央调度器（目的：创建springmvc的容器对象，创建controller。创建的是servlet才能获得用户的请求）
+        注册spring监听器（目的：创建spring的容器对象，创建service，dao对象）
+        注册字符集过滤器（目的：解决字符集乱码的问题）
+    4.创建包controller service dao 实体类
+    5.写spring，springmvc，mybatis，数据库属性的配置文件
+    6.代码完善
+    7.页面

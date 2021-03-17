@@ -11,7 +11,8 @@
         年龄：<input type="text" name="age"><br/>
         <input type="submit" value="提交参数">
     </form>
-
+    <br/>
+    <button id="btn">发起ajax请求</button>
 
 </body>
 </html>

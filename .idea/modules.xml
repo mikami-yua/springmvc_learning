@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch02-requestmapping/ch02-requestmapping.iml" filepath="$PROJECT_DIR$/ch02-requestmapping/ch02-requestmapping.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch03-reciveparam/ch03-reciveparam.iml" filepath="$PROJECT_DIR$/ch03-reciveparam/ch03-reciveparam.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04-return/ch04-return.iml" filepath="$PROJECT_DIR$/ch04-return/ch04-return.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch05-ssm/ch05-ssm.iml" filepath="$PROJECT_DIR$/ch05-ssm/ch05-ssm.iml" />
     </modules>
   </component>
 </project>
